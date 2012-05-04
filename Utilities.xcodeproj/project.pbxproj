@@ -10,6 +10,11 @@
 		5319D6801552692200972D6B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5319D67F1552692200972D6B /* Foundation.framework */; };
 		5319D6831552692200972D6B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5319D6821552692200972D6B /* main.m */; };
 		5319D6871552692200972D6B /* Utilities.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5319D6861552692200972D6B /* Utilities.1 */; };
+		5319D68F1552695C00972D6B /* ResourceProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5319D68E1552695C00972D6B /* ResourceProxy.m */; };
+		5319D69315527B1D00972D6B /* MemoryResourceCacheProvisioner.m in Sources */ = {isa = PBXBuildFile; fileRef = 5319D69215527B1D00972D6B /* MemoryResourceCacheProvisioner.m */; };
+		5319D6971552800800972D6B /* FileSystemResourceProvisioner.m in Sources */ = {isa = PBXBuildFile; fileRef = 5319D6961552800800972D6B /* FileSystemResourceProvisioner.m */; };
+		5319D6D11553746500972D6B /* NetResourceProvisioner.m in Sources */ = {isa = PBXBuildFile; fileRef = 5319D6D01553746500972D6B /* NetResourceProvisioner.m */; };
+		5319D6D41553889000972D6B /* StringDCD.m in Sources */ = {isa = PBXBuildFile; fileRef = 5319D6D31553889000972D6B /* StringDCD.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -29,8 +34,20 @@
 		5319D67B1552692200972D6B /* Utilities */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Utilities; sourceTree = BUILT_PRODUCTS_DIR; };
 		5319D67F1552692200972D6B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		5319D6821552692200972D6B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		5319D6851552692200972D6B /* Utilities-Prefix.pch */ = {isa = PBXFileReference; path = "Utilities-Prefix.pch"; sourceTree = "<group>"; };
+		5319D6851552692200972D6B /* Utilities-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Utilities-Prefix.pch"; sourceTree = "<group>"; };
 		5319D6861552692200972D6B /* Utilities.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = Utilities.1; sourceTree = "<group>"; };
+		5319D68D1552695C00972D6B /* ResourceProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ResourceProxy.h; path = ResourceProxy/ResourceProxy.h; sourceTree = "<group>"; };
+		5319D68E1552695C00972D6B /* ResourceProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ResourceProxy.m; path = ResourceProxy/ResourceProxy.m; sourceTree = "<group>"; };
+		5319D69115527B1D00972D6B /* MemoryResourceCacheProvisioner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MemoryResourceCacheProvisioner.h; path = ResourceProxy/MemoryResourceCacheProvisioner.h; sourceTree = "<group>"; };
+		5319D69215527B1D00972D6B /* MemoryResourceCacheProvisioner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MemoryResourceCacheProvisioner.m; path = ResourceProxy/MemoryResourceCacheProvisioner.m; sourceTree = "<group>"; };
+		5319D69415527B5800972D6B /* IResourceProvisioner.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = IResourceProvisioner.h; path = ResourceProxy/IResourceProvisioner.h; sourceTree = "<group>"; };
+		5319D6951552800800972D6B /* FileSystemResourceProvisioner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FileSystemResourceProvisioner.h; path = ResourceProxy/FileSystemResourceProvisioner.h; sourceTree = "<group>"; };
+		5319D6961552800800972D6B /* FileSystemResourceProvisioner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FileSystemResourceProvisioner.m; path = ResourceProxy/FileSystemResourceProvisioner.m; sourceTree = "<group>"; };
+		5319D6CE1552A26100972D6B /* IDataConvertDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = IDataConvertDelegate.h; path = ResourceProxy/IDataConvertDelegate.h; sourceTree = "<group>"; };
+		5319D6CF1553746500972D6B /* NetResourceProvisioner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NetResourceProvisioner.h; path = ResourceProxy/NetResourceProvisioner.h; sourceTree = "<group>"; };
+		5319D6D01553746500972D6B /* NetResourceProvisioner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NetResourceProvisioner.m; path = ResourceProxy/NetResourceProvisioner.m; sourceTree = "<group>"; };
+		5319D6D21553889000972D6B /* StringDCD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StringDCD.h; sourceTree = "<group>"; };
+		5319D6D31553889000972D6B /* StringDCD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StringDCD.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,7 +65,8 @@
 		5319D6701552692200972D6B = {
 			isa = PBXGroup;
 			children = (
-				5319D6811552692200972D6B /* Utilities */,
+				5319D69015527AE100972D6B /* ResourceProxy */,
+				5319D6811552692200972D6B /* Utilities TestApp */,
 				5319D67E1552692200972D6B /* Frameworks */,
 				5319D67C1552692200972D6B /* Products */,
 			);
@@ -70,13 +88,16 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		5319D6811552692200972D6B /* Utilities */ = {
+		5319D6811552692200972D6B /* Utilities TestApp */ = {
 			isa = PBXGroup;
 			children = (
 				5319D6821552692200972D6B /* main.m */,
 				5319D6861552692200972D6B /* Utilities.1 */,
 				5319D6841552692200972D6B /* Supporting Files */,
+				5319D6D21553889000972D6B /* StringDCD.h */,
+				5319D6D31553889000972D6B /* StringDCD.m */,
 			);
+			name = "Utilities TestApp";
 			path = Utilities;
 			sourceTree = "<group>";
 		};
@@ -86,6 +107,23 @@
 				5319D6851552692200972D6B /* Utilities-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5319D69015527AE100972D6B /* ResourceProxy */ = {
+			isa = PBXGroup;
+			children = (
+				5319D68D1552695C00972D6B /* ResourceProxy.h */,
+				5319D68E1552695C00972D6B /* ResourceProxy.m */,
+				5319D69115527B1D00972D6B /* MemoryResourceCacheProvisioner.h */,
+				5319D69215527B1D00972D6B /* MemoryResourceCacheProvisioner.m */,
+				5319D69415527B5800972D6B /* IResourceProvisioner.h */,
+				5319D6951552800800972D6B /* FileSystemResourceProvisioner.h */,
+				5319D6961552800800972D6B /* FileSystemResourceProvisioner.m */,
+				5319D6CE1552A26100972D6B /* IDataConvertDelegate.h */,
+				5319D6CF1553746500972D6B /* NetResourceProvisioner.h */,
+				5319D6D01553746500972D6B /* NetResourceProvisioner.m */,
+			);
+			name = ResourceProxy;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,6 +177,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				5319D6831552692200972D6B /* main.m in Sources */,
+				5319D68F1552695C00972D6B /* ResourceProxy.m in Sources */,
+				5319D69315527B1D00972D6B /* MemoryResourceCacheProvisioner.m in Sources */,
+				5319D6971552800800972D6B /* FileSystemResourceProvisioner.m in Sources */,
+				5319D6D11553746500972D6B /* NetResourceProvisioner.m in Sources */,
+				5319D6D41553889000972D6B /* StringDCD.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
