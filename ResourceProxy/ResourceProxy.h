@@ -9,22 +9,25 @@
 #import <Foundation/Foundation.h>
 #import "IResourceProvisioner.h"
 
-@protocol ResourceProxyDelegate <NSObject>
--(void) onProvisionerRead:(id<IResourceProvisioner>) prov andResource:(id)data;
--(void) onProvisionerwrite:(id<IResourceProvisioner>) prov andResource:(id)data;
-
-
+@protocol IResourceProxyDelegate <NSObject>
+-(void) provisionerBeingRead:(id<IResourceProvisioner>) prov andResource:(id)data;
+-(void) provisionerBeingWritten:(id<IResourceProvisioner>) prov andResource:(id)data;
+-(void) onEndGetResource:(id) res andByProvisioner:(id<IResourceProvisioner>) prov;
 @end
 
 @interface ResourceProxy : NSObject
 
-+(ResourceProxy*) proxyWithIdentificator:(NSString*) identificator;
+
++(ResourceProxy*) proxyWithIdentificator:(NSString*) identificator andForceUpdate:(BOOL)force; 
+//有setIndentificator / setForceUpdate in properties
 
 -(void) addProvisioner:(id<IResourceProvisioner>)provisioner;
 -(void) removeProvisioner:(id<IResourceProvisioner>)provisioner;
+-(id) getResourceWithDelegate:(id<IResourceProxyDelegate>) delegate;
 -(id) getResource;
--(void) getResourceAsync:(id<ResourceProxyDelegate>)delegate;
+-(void) getResourceAsync:(id<IResourceProxyDelegate>)delegate;
 
 @property(strong, atomic) NSMutableArray* provisionerList;
 @property(strong, nonatomic) NSString* identificator;
+@property BOOL forceUpdate;
 @end

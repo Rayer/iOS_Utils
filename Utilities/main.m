@@ -40,21 +40,63 @@ id<IResourceProvisioner> netProvisioner;
 
 @end
 
+@interface ProxyDelegate : NSObject <IResourceProxyDelegate>
+@end
+
+@implementation ProxyDelegate
+
+-(void) provisionerBeingRead:(id<IResourceProvisioner>) prov andResource:(id)data {
+    
+}
+
+-(void) provisionerBeingWritten:(id<IResourceProvisioner>) prov andResource:(id)data {
+    
+}
+
+-(void) onEndGetResource:(id) res andByProvisioner:(id<IResourceProvisioner>) prov {
+    NSLog(@"get resource : %@", res);
+}
+
+@end
+
 NetResourceProvisionerDelegate* netDelegate;
 
 
 void activeTest() {
+    ResourceProxy* proxy = [ResourceProxy proxyWithIdentificator:nil andForceUpdate:NO];
+    [proxy addProvisioner:memProvisioner];
+    [proxy addProvisioner:fileProvisioner];
+    [proxy addProvisioner:netProvisioner];
+
     for(int i = 0; i < 12; ++i) {
         NSString* idIndex = [NSString stringWithFormat:@"%d", i];
-        ResourceProxy* proxy = [ResourceProxy proxyWithIdentificator:idIndex];
-        [proxy addProvisioner:memProvisioner];
-        [proxy addProvisioner:fileProvisioner];
+        [proxy setIdentificator:idIndex];
+        [proxy setForceUpdate:NO];
         [netDelegate setCurrentID:idIndex];
-        [proxy addProvisioner:netProvisioner];
         
         NSString* target = [proxy getResource];
-        NSLog(@"%@", target == nil ? @"target not fetched" : @"target fetched");
+        NSLog(@"%@", target == nil ? @"target is not fetched" : @"target is fetched");
     }
+}
+
+void activeThreadTest() {
+    
+    for(int i = 0; i < 12; ++i) {
+        NSString* idIndex = [NSString stringWithFormat:@"%d", i];
+        
+        ResourceProxy* proxy = [ResourceProxy proxyWithIdentificator:idIndex andForceUpdate:NO];
+        [proxy addProvisioner:memProvisioner];
+        [proxy addProvisioner:fileProvisioner];
+        [proxy addProvisioner:netProvisioner];
+
+        [netDelegate setCurrentID:idIndex];
+        
+        [proxy getResourceAsync:[[ProxyDelegate alloc] init]];
+        //NSString* target = [proxy getResource];
+        //NSLog(@"%@", target == nil ? @"target is not fetched" : @"target is fetched");
+    }
+    
+    
 }
 
 
@@ -70,12 +112,15 @@ int main(int argc, const char * argv[])
         netProvisioner = [NetResourceProvisioner createProvisionerWithDelegate:netDelegate];
         
         
+        activeThreadTest();
+        while(YES)
+            [NSThread sleepForTimeInterval:20];
         //[fileProvisioner clearResources];
-        NSLog(@"Start testing proxy");
-        activeTest();
-        
-        NSLog(@"Supposed memory cache should works for now");
-        activeTest();
+//        NSLog(@"Start testing proxy");
+//        activeTest();
+//        
+//        NSLog(@"Supposed memory cache should works for now");
+//        activeTest();
         
     }
     return 0;
