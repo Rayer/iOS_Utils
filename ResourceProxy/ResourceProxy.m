@@ -11,7 +11,7 @@
 @implementation ResourceProxy
 @synthesize provisionerList = _provisionerList;
 @synthesize identificator = _id;
-@synthesize forceUpdate;
+@synthesize forceUpdate = _forceUpdate;
 
 +(ResourceProxy*) proxyWithIdentificator:(NSString *)identificator andForceUpdate:(BOOL) force{
     ResourceProxy* ret = [[ResourceProxy alloc]init];
@@ -63,7 +63,7 @@
             break;
         }
     }
-    [delegate onEndGetResource:ret andByProvisioner:elightableProv];
+    [delegate onEndGetResource:ret andByProvisioner:elightableProv andWithIdentify:_id];
     return ret;
     
 }

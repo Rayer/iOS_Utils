@@ -53,8 +53,9 @@ id<IResourceProvisioner> netProvisioner;
     
 }
 
--(void) onEndGetResource:(id) res andByProvisioner:(id<IResourceProvisioner>) prov {
-    NSLog(@"get resource : %@", res);
+-(void) onEndGetResource:(id) res andByProvisioner:(id<IResourceProvisioner>)prov andWithIdentify:(NSString *)identify{
+    //NSLog(@"get resource : %@", res);
+    NSLog(@"End retrieving data : %@", identify);
 }
 
 @end
@@ -68,7 +69,7 @@ void activeTest() {
     [proxy addProvisioner:fileProvisioner];
     [proxy addProvisioner:netProvisioner];
 
-    for(int i = 0; i < 12; ++i) {
+    for(int i = 0; i < 240; ++i) {
         NSString* idIndex = [NSString stringWithFormat:@"%d", i];
         [proxy setIdentificator:idIndex];
         [proxy setForceUpdate:NO];
@@ -81,12 +82,12 @@ void activeTest() {
 
 void activeThreadTest() {
     
-    for(int i = 0; i < 12; ++i) {
+    for(int i = 0; i < 240; ++i) {
         NSString* idIndex = [NSString stringWithFormat:@"%d", i];
         
         ResourceProxy* proxy = [ResourceProxy proxyWithIdentificator:idIndex andForceUpdate:NO];
-        [proxy addProvisioner:memProvisioner];
-        [proxy addProvisioner:fileProvisioner];
+        //[proxy addProvisioner:memProvisioner];
+        //[proxy addProvisioner:fileProvisioner];
         [proxy addProvisioner:netProvisioner];
 
         [netDelegate setCurrentID:idIndex];

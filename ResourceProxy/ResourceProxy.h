@@ -12,7 +12,7 @@
 @protocol IResourceProxyDelegate <NSObject>
 -(void) provisionerBeingRead:(id<IResourceProvisioner>) prov andResource:(id)data;
 -(void) provisionerBeingWritten:(id<IResourceProvisioner>) prov andResource:(id)data;
--(void) onEndGetResource:(id) res andByProvisioner:(id<IResourceProvisioner>) prov;
+-(void) onEndGetResource:(id)res andByProvisioner:(id<IResourceProvisioner>) prov andWithIdentify:(NSString*)identify;
 @end
 
 @interface ResourceProxy : NSObject

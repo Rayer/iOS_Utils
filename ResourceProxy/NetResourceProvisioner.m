@@ -25,16 +25,20 @@
 
     NSURL* url = [_dele createResourceURL:identify];
     NSURLRequest* request = [NSURLRequest requestWithURL:url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:15.0];
-    NSURLResponse* response = [[NSURLResponse alloc] init];
+    NSHTTPURLResponse* response = [[NSHTTPURLResponse alloc] init];
     NSError* error = [[NSError alloc] init ];
     NSData* data = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
     
+    //response 
+    NSLog(@"ID : %@ and Return code : %ld", identify, [response statusCode]);
     //is this really required?
-    if(data == nil) {
+    if(data == nil || [response statusCode] != 200) {
         [_dele onResourceFetchingError:error];
+        NSLog(@"ID : %@ returned nil!", identify);
         return nil;
     }
     
+    NSLog(@"ID : %@ get data with length : %lu", identify, [data length]);
     return [_dele convertDataToResource:data];
 }
 
