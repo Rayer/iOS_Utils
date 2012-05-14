@@ -15,6 +15,16 @@
 		5319D6971552800800972D6B /* FileSystemResourceProvisioner.m in Sources */ = {isa = PBXBuildFile; fileRef = 5319D6961552800800972D6B /* FileSystemResourceProvisioner.m */; };
 		5319D6D11553746500972D6B /* NetResourceProvisioner.m in Sources */ = {isa = PBXBuildFile; fileRef = 5319D6D01553746500972D6B /* NetResourceProvisioner.m */; };
 		5319D6D41553889000972D6B /* StringDCD.m in Sources */ = {isa = PBXBuildFile; fileRef = 5319D6D31553889000972D6B /* StringDCD.m */; };
+		534092CF1560B16C0055C4DE /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 534092CE1560B16C0055C4DE /* Cocoa.framework */; };
+		534092D91560B16C0055C4DE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 534092D71560B16C0055C4DE /* InfoPlist.strings */; };
+		534092DD1560B16C0055C4DE /* UtilFrameworks.m in Sources */ = {isa = PBXBuildFile; fileRef = 534092DC1560B16C0055C4DE /* UtilFrameworks.m */; };
+		534092E21560B19A0055C4DE /* ResourceProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = 5319D68D1552695C00972D6B /* ResourceProxy.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		534092E31560B19A0055C4DE /* MemoryResourceCacheProvisioner.h in Headers */ = {isa = PBXBuildFile; fileRef = 5319D69115527B1D00972D6B /* MemoryResourceCacheProvisioner.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		534092E41560B19A0055C4DE /* IResourceProvisioner.h in Headers */ = {isa = PBXBuildFile; fileRef = 5319D69415527B5800972D6B /* IResourceProvisioner.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		534092E51560B19A0055C4DE /* FileSystemResourceProvisioner.h in Headers */ = {isa = PBXBuildFile; fileRef = 5319D6951552800800972D6B /* FileSystemResourceProvisioner.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		534092E61560B19A0055C4DE /* IDataConvertDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 5319D6CE1552A26100972D6B /* IDataConvertDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		534092E71560B19A0055C4DE /* NetResourceProvisioner.h in Headers */ = {isa = PBXBuildFile; fileRef = 5319D6CF1553746500972D6B /* NetResourceProvisioner.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		534092E81560B19A0055C4DE /* UtilFrameworks.h in Headers */ = {isa = PBXBuildFile; fileRef = 534092DB1560B16C0055C4DE /* UtilFrameworks.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -48,6 +58,16 @@
 		5319D6D01553746500972D6B /* NetResourceProvisioner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NetResourceProvisioner.m; path = ResourceProxy/NetResourceProvisioner.m; sourceTree = "<group>"; };
 		5319D6D21553889000972D6B /* StringDCD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StringDCD.h; sourceTree = "<group>"; };
 		5319D6D31553889000972D6B /* StringDCD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StringDCD.m; sourceTree = "<group>"; };
+		534092CD1560B16C0055C4DE /* UtilFrameworks.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UtilFrameworks.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		534092CE1560B16C0055C4DE /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		534092D11560B16C0055C4DE /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		534092D21560B16C0055C4DE /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		534092D31560B16C0055C4DE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		534092D61560B16C0055C4DE /* UtilFrameworks-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "UtilFrameworks-Info.plist"; sourceTree = "<group>"; };
+		534092D81560B16C0055C4DE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		534092DA1560B16C0055C4DE /* UtilFrameworks-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UtilFrameworks-Prefix.pch"; sourceTree = "<group>"; };
+		534092DB1560B16C0055C4DE /* UtilFrameworks.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UtilFrameworks.h; sourceTree = "<group>"; };
+		534092DC1560B16C0055C4DE /* UtilFrameworks.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UtilFrameworks.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +79,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		534092C91560B16C0055C4DE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				534092CF1560B16C0055C4DE /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -67,6 +95,7 @@
 			children = (
 				5319D69015527AE100972D6B /* ResourceProxy */,
 				5319D6811552692200972D6B /* Utilities TestApp */,
+				534092D41560B16C0055C4DE /* UtilFrameworks */,
 				5319D67E1552692200972D6B /* Frameworks */,
 				5319D67C1552692200972D6B /* Products */,
 			);
@@ -76,6 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				5319D67B1552692200972D6B /* Utilities */,
+				534092CD1560B16C0055C4DE /* UtilFrameworks.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -84,6 +114,8 @@
 			isa = PBXGroup;
 			children = (
 				5319D67F1552692200972D6B /* Foundation.framework */,
+				534092CE1560B16C0055C4DE /* Cocoa.framework */,
+				534092D01560B16C0055C4DE /* Other Frameworks */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -126,7 +158,54 @@
 			name = ResourceProxy;
 			sourceTree = "<group>";
 		};
+		534092D01560B16C0055C4DE /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				534092D11560B16C0055C4DE /* AppKit.framework */,
+				534092D21560B16C0055C4DE /* CoreData.framework */,
+				534092D31560B16C0055C4DE /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		534092D41560B16C0055C4DE /* UtilFrameworks */ = {
+			isa = PBXGroup;
+			children = (
+				534092DB1560B16C0055C4DE /* UtilFrameworks.h */,
+				534092DC1560B16C0055C4DE /* UtilFrameworks.m */,
+				534092D51560B16C0055C4DE /* Supporting Files */,
+			);
+			path = UtilFrameworks;
+			sourceTree = "<group>";
+		};
+		534092D51560B16C0055C4DE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				534092D61560B16C0055C4DE /* UtilFrameworks-Info.plist */,
+				534092D71560B16C0055C4DE /* InfoPlist.strings */,
+				534092DA1560B16C0055C4DE /* UtilFrameworks-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		534092CA1560B16C0055C4DE /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				534092E21560B19A0055C4DE /* ResourceProxy.h in Headers */,
+				534092E31560B19A0055C4DE /* MemoryResourceCacheProvisioner.h in Headers */,
+				534092E41560B19A0055C4DE /* IResourceProvisioner.h in Headers */,
+				534092E51560B19A0055C4DE /* FileSystemResourceProvisioner.h in Headers */,
+				534092E61560B19A0055C4DE /* IDataConvertDelegate.h in Headers */,
+				534092E71560B19A0055C4DE /* NetResourceProvisioner.h in Headers */,
+				534092E81560B19A0055C4DE /* UtilFrameworks.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		5319D67A1552692200972D6B /* Utilities */ = {
@@ -145,6 +224,24 @@
 			productName = Utilities;
 			productReference = 5319D67B1552692200972D6B /* Utilities */;
 			productType = "com.apple.product-type.tool";
+		};
+		534092CC1560B16C0055C4DE /* UtilFrameworks */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 534092E01560B16C0055C4DE /* Build configuration list for PBXNativeTarget "UtilFrameworks" */;
+			buildPhases = (
+				534092C81560B16C0055C4DE /* Sources */,
+				534092C91560B16C0055C4DE /* Frameworks */,
+				534092CA1560B16C0055C4DE /* Headers */,
+				534092CB1560B16C0055C4DE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = UtilFrameworks;
+			productName = UtilFrameworks;
+			productReference = 534092CD1560B16C0055C4DE /* UtilFrameworks.framework */;
+			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
@@ -167,9 +264,21 @@
 			projectRoot = "";
 			targets = (
 				5319D67A1552692200972D6B /* Utilities */,
+				534092CC1560B16C0055C4DE /* UtilFrameworks */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		534092CB1560B16C0055C4DE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				534092D91560B16C0055C4DE /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5319D6771552692200972D6B /* Sources */ = {
@@ -185,7 +294,26 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		534092C81560B16C0055C4DE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				534092DD1560B16C0055C4DE /* UtilFrameworks.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		534092D71560B16C0055C4DE /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				534092D81560B16C0055C4DE /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		5319D6881552692200972D6B /* Debug */ = {
@@ -253,6 +381,34 @@
 			};
 			name = Release;
 		};
+		534092DE1560B16C0055C4DE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "UtilFrameworks/UtilFrameworks-Prefix.pch";
+				INFOPLIST_FILE = "UtilFrameworks/UtilFrameworks-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Debug;
+		};
+		534092DF1560B16C0055C4DE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "UtilFrameworks/UtilFrameworks-Prefix.pch";
+				INFOPLIST_FILE = "UtilFrameworks/UtilFrameworks-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -270,6 +426,15 @@
 			buildConfigurations = (
 				5319D68B1552692200972D6B /* Debug */,
 				5319D68C1552692200972D6B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		534092E01560B16C0055C4DE /* Build configuration list for PBXNativeTarget "UtilFrameworks" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				534092DE1560B16C0055C4DE /* Debug */,
+				534092DF1560B16C0055C4DE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};

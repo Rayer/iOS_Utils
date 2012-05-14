@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
- 
+
 @protocol IResourceProvisioner
 @required
 -(id)getResource:(NSString*)identify;
