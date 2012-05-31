@@ -30,7 +30,7 @@
     NSData* data = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
     
     //response 
-    NSLog(@"ID : %@ and Return code : %ld", identify, [response statusCode]);
+    NSLog(@"ID : %@ and Return code : %d", identify, [response statusCode]);
     //is this really required?
     if(data == nil || [response statusCode] != 200) {
         [_dele onResourceFetchingError:error];
@@ -38,7 +38,7 @@
         return nil;
     }
     
-    NSLog(@"ID : %@ get data with length : %lu", identify, [data length]);
+    NSLog(@"ID : %@ get data with length : %u", identify, [data length]);
     return [_dele convertDataToResource:data];
 }
 

@@ -4,15 +4,50 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>UtilFrameworks.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
+		<key>UtilLibs.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
 		<key>Utilities.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>0</integer>
+			<integer>1</integer>
+		</dict>
+		<key>iUtilLib.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>4</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>5319D67A1552692200972D6B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>534092CC1560B16C0055C4DE</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>534093941560EF940055C4DE</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>534093A11560EF940055C4DE</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>534EAD8F15620A9A00CF4F3E</key>
 		<dict>
 			<key>primary</key>
 			<true/>

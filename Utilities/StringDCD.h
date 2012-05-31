@@ -8,7 +8,8 @@
 
 #import <Foundation/Foundation.h>
 #import "IDataConvertDelegate.h"
+#import "NetResourceProvisioner.h"
 
-@interface StringDCD : NSObject <IDataConvertDelegate>
+@interface StringDCD : NSObject <INetDataConvertDelegate>
 
 @end

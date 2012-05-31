@@ -86,8 +86,8 @@ void activeThreadTest() {
         NSString* idIndex = [NSString stringWithFormat:@"%d", i];
         
         ResourceProxy* proxy = [ResourceProxy proxyWithIdentificator:idIndex andForceUpdate:NO];
-        //[proxy addProvisioner:memProvisioner];
-        //[proxy addProvisioner:fileProvisioner];
+        [proxy addProvisioner:memProvisioner];
+        [proxy addProvisioner:fileProvisioner];
         [proxy addProvisioner:netProvisioner];
 
         [netDelegate setCurrentID:idIndex];

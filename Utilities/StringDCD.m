@@ -8,6 +8,8 @@
 
 #import "StringDCD.h"
 
+#define FETCH_INET_FORMAT @"http://api.appwondr.com/app/get/%@.json"
+
 @implementation StringDCD
 
 -(id) convertDataToResource:(NSData*) data {
@@ -20,5 +22,15 @@
     NSString* string = resource;
     return [string dataUsingEncoding:NSUTF8StringEncoding];
 }
+
+
+
+-(NSURL*) createResourceURL:(NSString*) identificator {
+    
+    NSLog(@"creating url : %@", [NSString stringWithFormat:FETCH_INET_FORMAT, identificator]);
+    return [NSURL URLWithString:[NSString stringWithFormat:FETCH_INET_FORMAT, identificator]];
+}
+
+
 
 @end
